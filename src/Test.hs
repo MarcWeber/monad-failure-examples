@@ -50,15 +50,17 @@ monadFailureWithErrorLocationsTest = TestList [
   ]
 
   where trace = [
-              "testCase1, TestCase1(src/TestCase1.hs): (52, 20)",
-              "testCase1, TestCase1(src/TestCase1.hs): (52, 23)",
-              "a, TestCase1(src/TestCase1.hs): (44, 11)",
-              "a, TestCase1(src/TestCase1.hs): (44, 14)",
-              "b, TestCase1(src/TestCase1.hs): (45, 11)",
-              "b, TestCase1(src/TestCase1.hs): (45, 14)",
-              "a, TestCase1(src/TestCase1.hs): (44, 11)",
-              "a, TestCase1(src/TestCase1.hs): (44, 14)"
-            ]
+                  "testCase1, TestCase1(src/TestCase1.hs): (54, 20)",
+                  "testCase1, TestCase1(src/TestCase1.hs): (54, 23)",
+                  "a, TestCase1(src/TestCase1.hs): (46, 11)",
+                  "a, TestCase1(src/TestCase1.hs): (46, 14)",
+                  "b, TestCase1(src/TestCase1.hs): (47, 11)",
+                  "b, TestCase1(src/TestCase1.hs): (47, 14)",
+                  "a, TestCase1(src/TestCase1.hs): (46, 11)",
+                  "a, TestCase1(src/TestCase1.hs): (46, 14)",
+                  "recurse, TestCase1(src/TestCase1.hs): (43, 24)",
+                  "recurse, TestCase1(src/TestCase1.hs): (43, 27)"
+                ]
 
 -- TODO add examples showing how to use the following packages: 
 -- control-monad-exception-monadsfd library: Explicitly typed, checked exceptions with stack traces

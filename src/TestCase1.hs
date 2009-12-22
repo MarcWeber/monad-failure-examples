@@ -35,10 +35,12 @@ instance Exception IsNull where
     toException se = SomeException se
     fromException x = fromException x
 
-recurse _   n _ | n <= -100 = throw TooLow
+-- intentionally using "do throw .." 
+-- do will add the final location information onto the CallTrace
+recurse _   n _ | n <= -100 = do throw TooLow
 recurse _   (-1)   _ = return "ok"
 recurse act (-2)   _ = act
-recurse _      0   _ = throw IsNull
+recurse _      0   _ = do throw IsNull
 recurse act   n f = f act (n -1)
 
 a act n = do recurse act n b
