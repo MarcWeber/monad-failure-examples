@@ -1,0 +1,22 @@
+Name:            monad-failure-examples
+version:         0.1.1
+synopsis:        some monad-failure-* examples serving as test suite
+category:        Utils
+maintainer:      Marc Weber <marco-oweber@gmx.de>
+author:          Marc Weber <marco-oweber@gmx.de>
+build-type:      Simple
+
+build-depends:    
+          mtl,
+          base,
+          failure,
+          control-monad-exception,
+          monadloc,
+          HUnit
+
+license:        PublicDomain
+
+executable:     Test
+main-is:        Test.hs
+hs-source-dirs: src
+ghc-options   : -Wall -fno-warn-missing-signatures
